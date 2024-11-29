@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche de films</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-and-langage">
+            <h1><a href="index.html">Just Watch</a></h1> <!-- Lien pour éviter de rafraichir la page pour accéder à l'accueil-->
+
+            <form id="languageForm">
+                <label for="languageSelect">Choisir la langue :</label>
+                <select id="languageSelect">
+                    <option value="fr-FR">Français</option>
+                    <option value="en-US">Anglais</option>
+                    <option value="es-ES">Espagnol</option>
+                    <option value="de-DE">Allemand</option>
+                </select>
+            </form>
+        </div>
+        
+    
+        <form id="searchForm">
+            <label for="searchInput">Rechercher un film :</label>
+            <input type="text" id="searchInput" placeholder="Entrez un titre de film">
+            <button type="submit">Rechercher</button>
+        </form>
+    </header>
+    <main>
+
+        <section id="movieList">
+        </section>
+        <nav id="pagination">
+        </nav>
+    </main>
+    <script src="js/TmdbApi.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
