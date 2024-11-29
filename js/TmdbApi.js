@@ -5,7 +5,7 @@ class TmdbApi {
     constructor(apiToken) {
         this.#apiToken = apiToken;
         this.#language = "fr-FR";
-        this._baseUrl = "https://api.themoviedb.org/3";
+        this.baseUrl = "https://api.themoviedb.org/3";
     }
 
     get apiToken() {
@@ -31,7 +31,7 @@ class TmdbApi {
     }
 
     async fetchFromApi(endpoint, params = {}) {
-        const url = new URL(`${this._baseUrl}${endpoint}`);
+        const url = new URL(`${this.baseUrl}${endpoint}`);
         params.language = this.#language;
         Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
 
