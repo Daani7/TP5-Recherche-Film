@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: yellow;
+}
+
+.logo-and-langage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm input, #languageForm select, #searchForm button {
+    padding: 10px;
+    margin: 5px;
+}
+
+#searchForm {
+    display: flex;
+}
+
+#searchForm button {
+    border: none;
+    border-radius: 5px;
+}
+
+#searchForm button:hover {
+    cursor: pointer;
+    background-color: grey;
+}
+
+#searchInput {
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+}
+
+#movieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+ /* ce code permet de chosir la préférence d'affichage des films sur la page web  */
+.movie-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px; /* baisser ou monter le nombre de pixels pour afficher le nombre souhaiter de films par ligne (actuellement 5films par lignes) */
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    padding: 0 10px;
+    color: #555;
+}
+
+#pagination {
+    text-align: center;
+    padding: 20px;
+}
+
+#pagination button {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pagination button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
